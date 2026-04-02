@@ -18,23 +18,24 @@ The authoritative business logic and mathematical formulas for this service are 
 ## Valdation
 To certify this baseline as stable, the following three-step validation must be completed.
 
-### 1. Mathematical Accuracy (Automated)
+### 1. Install dependencies
+```pip install -r requirements.txt```
+
+### 2. Mathematical Accuracy (Automated)
 Run the test suite to verify all tests pass.
 
 ```python -m pytest test_main.py -v ```
 
-### 2. API Contract Integrity (Interactive)
+### 3. API Contract Integrity (Interactive)
 Validate the live OpenAPI schema and response structure.
 
-Start the service: ```python -m uvicorn main:app --reload```
+- Start the service: ```python -m uvicorn main:app --reload```
+- Navigate to: http://127.0.0.1:8000/docs
+- Execute Smoke Test:
+  - **Input**: {"refund_amount": 50, "total_amount": 100, "tax_paid": 15}
+  - **Output**: {"status": "success", "formula_version": "1.0", "tax_refund": 7.5}
 
-Navigate to: http://127.0.0.1:8000/docs
-
-Execute Smoke Test: * Input: {"refund_amount": 50, "total_amount": 100, "tax_paid": 15}
-
-Output: {"status": "success", "formula_version": "1.0", "tax_refund": 7.5}
-
-### 3. Specification Rendering
+### 4. Specification Rendering
 Verify the "Source of Truth" is legible for non-technical stakeholders.
 
 Open ```docs/refund_spec_v1.md``` in a Markdown viewer.
