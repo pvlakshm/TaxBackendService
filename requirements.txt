@@ -1,0 +1,6 @@
+# Find best compatible versions of dependencies
+fastapi
+uvicorn
+pydantic
+pytest
+httpx
