@@ -1,4 +1,8 @@
 # TaxBackendService
+![Python](https://img.shields.io/badge/python-3.14+-blue?logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-009688?logo=fastapi&logoColor=white)
+![Pydantic](https://img.shields.io/badge/Pydantic-v2-e92063?logo=pydantic&logoColor=white)
+![pytest](https://img.shields.io/badge/tested%20with-pytest-0a9edc?logo=pytest&logoColor=white)
 
 An enterprise-grade Python microservice for calculating proportional tax refunds. Part of the **Tax Refund System**, which also includes [TaxFrontendPortal](https://github.com/pvlakshm/TaxFrontendPortal) — the React-based user interface that consumes this API.
 
