@@ -1,2 +1,5 @@
 __pycache__/
 /.pytest_cache/
+tax_refunds.db
+.postqode
+.coverage
