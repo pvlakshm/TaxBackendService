@@ -50,8 +50,10 @@ The service applies a **proportional tax refund** formula defined in [`docs/refu
 
 ```
 TaxBackendService/
-├── main.py               # FastAPI app, CORS config, and calculation endpoint
-├── test_main.py          # Pytest test suite
+├── src/
+│   └── main.py           # FastAPI app, CORS config, and calculation endpoint
+├── tests/
+│   └── test_main.py      # Pytest test suite
 ├── requirements.txt      # Python dependencies
 └── docs/
     └── refund_spec_v1.md # Versioned business logic specification (LaTeX)
@@ -70,7 +72,7 @@ pip install -r requirements.txt
 ### 2. Run the Service
 
 ```bash
-python -m uvicorn main:app --reload
+python -m uvicorn src.main:app --reload
 ```
 
 The service starts at `http://127.0.0.1:8000`.
@@ -128,7 +130,7 @@ Calculates the proportional tax refund for a returned item.
 ## Running Tests
 
 ```bash
-python -m pytest test_main.py -v
+python -m pytest tests/ -v
 ```
 
 ---
