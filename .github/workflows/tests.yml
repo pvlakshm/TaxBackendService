@@ -31,7 +31,8 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install pytest
-          pip install -e .  # This installs your local src code as a package
-
+      
       - name: Run unit tests
+        env:
+          PYTHONPATH: ${{ github.workspace }}
         run: pytest
